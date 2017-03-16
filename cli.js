@@ -8,8 +8,10 @@ const cli = meow(`
 	  $ snip [input]
 
 	Options
-	  action  print a redux action creator snippet
-		reducer print a redux reducer snippet
+	  action    Print a redux action creator snippet
+		reducer   Print a redux reducer snippet
+		function  Print a functional React component
+		class	    Print a class-based React component
 
 	Examples
 	  $ snip action
