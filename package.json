@@ -17,6 +17,7 @@
     "test": "eslint cli.js index.js templates && ava"
   },
   "files": [
+    "snippets",
     "index.js",
     "cli.js"
   ],
