@@ -14,7 +14,8 @@ const cli = meow(`
     reducer   Print a redux reducer snippet
     function  Print a functional React component
     class     Print a class-based React component
-
+    lorem     Print 3 paragraphs of lorem ipsum text
+    
   Examples
     $ jsnip action
     $ jsnip reducer

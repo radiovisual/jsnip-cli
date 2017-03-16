@@ -25,6 +25,12 @@ test('class', async (t) => {
   t.true(data.search('export default ClassName;') > -1);
 });
 
+test('lorem', async (t) => {
+  const data = await fn('lorem');
+  t.is(typeof data, 'string');
+  t.true(data.search('Lorem ipsum dolor sit amet') > -1);
+});
+
 test('reports unknown parameters', async (t) => {
   const data = await fn('foobarstuff');
   t.is(data, 'There is no snippet by the name foobarstuff');

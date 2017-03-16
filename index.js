@@ -12,6 +12,7 @@ module.exports = (input) => {
     reducer: 'redux-reducer.js',
     function: 'react-function.js',
     class: 'react-class.js',
+    lorem: 'lorem.txt',
   };
 
   if (!snippets[input]) {
