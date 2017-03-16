@@ -1,9 +1,9 @@
 {
-  "name": "snip",
+  "name": "jsnip",
   "version": "0.0.1",
   "description": "Get common JavaScript code snippets",
   "license": "MIT",
-  "repository": "radiovisual/snip",
+  "repository": "radiovisual/jsnip",
   "author": {
     "name": "Michael Wuergler",
     "email": "wuergler@gmail.com",
@@ -14,7 +14,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "eslint index.js templates && ava"
+    "test": "eslint cli.js index.js templates && ava"
   },
   "files": [
     "index.js",
@@ -28,6 +28,7 @@
     "JS",
     "js",
     "code",
+    "snip",
     "snippets",
     "from",
     "command",

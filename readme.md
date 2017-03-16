@@ -1,4 +1,4 @@
-# snip [![Build Status](https://travis-ci.org/radiovisual/snip.svg?branch=master)](https://travis-ci.org/radiovisual/snip)
+# jsnip [![Build Status](https://travis-ci.org/radiovisual/jsnip.svg?branch=master)](https://travis-ci.org/radiovisual/jsnip)
 
 > Get common JavaScript code snippets.
 
@@ -14,13 +14,13 @@ linted according to the AirBnB Style.
 
 Install the cli to use on the command line
 ```
-$ npm install --global snip
+$ npm install --global jsnip
 ```
 
 Or, you can install and use it within your node projects / build routines
 
 ```
-$ npm install --save snip
+$ npm install --save jsnip
 ```
 
 
@@ -29,19 +29,19 @@ $ npm install --save snip
 From the cli:
 
 ```
-$ snip reducer
+$ jsnip reducer
 ```
 
 Or from Node.js:
 
 ```js
-const snip = require('snip');
-snip('reducer');
+const jsnip = require('jsnip');
+jsnip('reducer');
 ```
 
 ## API
 
-### snip(input)
+### jsnip(input)
 
 #### input
 
@@ -61,22 +61,24 @@ snippet file.
 ## CLI
 
 ```
-$ npm install --global snip
+$ npm install --global jsnip
 ```
 
 ```
-$ snip --help
+$ jsnip --help
 
 Usage
-  $ snip [input]
+  $ jsnip [input]
 
 Options
   action  print a redux action creator snippet
   reducer print a redux reducer snippet
+  function  Print a functional React component
+  class	    Print a class-based React component
 
 Examples
-  $ snip action
-  $ snip reducer
+  $ jsnip action
+  $ jsnip reducer
 ```
 
 ## Contribution
