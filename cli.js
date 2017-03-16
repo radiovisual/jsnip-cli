@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 const meow = require('meow');
+const chalk = require('chalk');
 const jsnip = require('./');
+
+const rule = chalk.cyan('---------------------------------');
 
 const cli = meow(`
   Usage
@@ -19,8 +22,9 @@ const cli = meow(`
 
 jsnip(cli.input[0])
   .then((data) => {
-    console.log();
+    console.log(rule);
     console.log(data);
+    console.log(rule);
   })
   .catch((err) => {
     if (err) {
