@@ -52,10 +52,11 @@ snippet file.
 
 | input | Description |
 | ------| -----------|
-| [function](templates/react-function.js)   | A functional React component. |
-| [class](templates/react-class.js)       | A class-based React component. |
-| [action](templates/redux-actions.js)     | A Redux action snippet. |
-| [reducer](templates/redux-reducer.js)     | A Redux reducer snippet. |
+| [function](snippets/react-function.js)   | A functional React component. |
+| [class](snippets/react-class.js)       | A class-based React component. |
+| [action](snippets/redux-actions.js)     | A Redux action snippet. |
+| [reducer](snippets/redux-reducer.js)     | A Redux reducer snippet. |
+| [lorem](snippets/lorem.txt)     | 3 paragraphs of lorem ipsum text. |
 
 
 ## CLI
