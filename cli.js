@@ -19,7 +19,8 @@ const cli = meow(`
 
 jsnip(cli.input[0])
   .then((data) => {
-    console.log('\n', data); // eslint-disable-line no-console
+    console.log();
+    console.log(data);
   })
   .catch((err) => {
     if (err) {
