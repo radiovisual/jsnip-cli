@@ -72,10 +72,11 @@ Usage
   $ jsnip [input]
 
 Options
-  action  print a redux action creator snippet
-  reducer print a redux reducer snippet
+  action    print a redux action creator snippet
+  reducer   print a redux reducer snippet
   function  Print a functional React component
   class	    Print a class-based React component
+  lorem     Print 3 paragraphs of lorem ipsum text
 
 Examples
   $ jsnip action

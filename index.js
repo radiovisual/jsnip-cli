@@ -19,6 +19,6 @@ module.exports = (input) => {
     return Promise.resolve(`There is no snippet by the name ${input}`);
   }
 
-  const filepath = path.join('snippets', snippets[input]);
+  const filepath = path.join(__dirname, 'snippets', snippets[input]);
   return pify(fs.readFile)(filepath, 'utf8');
 };
