@@ -22,22 +22,22 @@ test('class', async (t) => {
 });
 
 test('custom action', async (t) => {
-  const { stdout } = await execa('./cli.js', ['action', 'Foo']);
+  const { stdout } = await execa('./cli.js', ['action', '-n', 'Foo']);
   t.true(stdout.search('export default Foo;') > -1);
 });
 
 test('custom reducer', async (t) => {
-  const { stdout } = await execa('./cli.js', ['reducer', 'Foo']);
+  const { stdout } = await execa('./cli.js', ['reducer', '-n', 'Foo']);
   t.true(stdout.search('export default Foo;') > -1);
 });
 
 test('custom function', async (t) => {
-  const { stdout } = await execa('./cli.js', ['function', 'Foo']);
+  const { stdout } = await execa('./cli.js', ['function', '-n', 'Foo']);
   t.true(stdout.search('export default Foo;') > -1);
 });
 
 test('custom class', async (t) => {
-  const { stdout } = await execa('./cli.js', ['class', 'Foo']);
+  const { stdout } = await execa('./cli.js', ['class', '-n', 'Foo']);
   t.true(stdout.search('export default Foo;') > -1);
 });
 
