@@ -2,11 +2,11 @@
 
 > Get common JavaScript code snippets.
 
-:hamburger: This is my WIP snippet library. Currently this module outputs static code snippets,
-but soon I will implement a template system where the function or class names can be
-supplied to customize the output.
+:hamburger: This is my WIP snippet library where you can get common JS code snippets
+from the command line. You have the option to customize the snippet or output
+the snippet to the system clipboard.
 
-Note that the React snippets are currently in a React Native flavor and that the
+**Note:** The React snippets are currently in a React Native flavor and that the
 JavaScript is intended to reflect the ES2015 (ES6) syntax. The snippets are all
 linted according to the AirBnB Style.
 
@@ -29,7 +29,7 @@ $ npm install --save jsnip
 From the cli:
 
 ```
-$ jsnip reducer
+$ jsnip class -c -n MyClass
 ```
 
 Or from Node.js:
@@ -41,7 +41,7 @@ jsnip('reducer');
 
 ## API
 
-### jsnip(input)
+### jsnip(input, [options])
 
 #### input
 
@@ -58,6 +58,16 @@ snippet file.
 | [reducer](snippets/redux-reducer.js)     | A Redux reducer snippet. |
 | [lorem](snippets/lorem.txt)     | 3 paragraphs of lorem ipsum text. |
 
+#### input
+
+Type: `object`  
+
+Possible options are:
+
+| Name | Description |
+| ------| -----------|
+| `-c, --copy`   | Copy the output to the system clipboard |
+| `-n, --name`      | Specify the function or class name to use in the output |
 
 ## CLI
 
@@ -71,16 +81,21 @@ $ jsnip --help
 Usage
   $ jsnip [input]
 
-Options
-  action    print a redux action creator snippet
-  reducer   print a redux reducer snippet
+Commands
+  action    Print a redux action creator snippet
+  reducer   Print a redux reducer snippet
   function  Print a functional React component
-  class	    Print a class-based React component
+  class     Print a class-based React component
   lorem     Print 3 paragraphs of lorem ipsum text
+
+Options
+  -n, --name  Specify the name to use in the output
+  -c, --copy  Copy the output to the system clipboard
 
 Examples
   $ jsnip action
   $ jsnip reducer
+  $ jsnip class -c -n MyAwesomeClass
 ```
 
 ## Contribution
