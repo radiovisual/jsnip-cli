@@ -3,12 +3,11 @@
 > Get common JavaScript code snippets.
 
 :hamburger: This is my WIP snippet library where you can get common JS code snippets
-from the command line. You have the option to customize the snippet or output
+from the command line. You have the option to customize the snippet or send
 the snippet to the system clipboard.
 
-**Note:** The React snippets are currently in a React Native flavor and that the
-JavaScript is intended to reflect the ES2015 (ES6) syntax. The snippets are all
-linted according to the AirBnB Style.
+**Note:** The React snippets are currently in a React Native flavor and the
+JavaScript is intended to reflect the ES2015 (ES6) syntax.
 
 ## Install
 
