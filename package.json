@@ -1,24 +1,24 @@
 {
-  "name": "jsnip",
-  "version": "0.0.6",
-  "description": "Get common JavaScript code snippets",
+  "name": "jsnip-cli",
+  "version": "0.0.7",
+  "description": "Get common JavaScript code snippets from the command line.",
   "license": "MIT",
-  "repository": "radiovisual/jsnip",
+  "repository": "radiovisual/jsnip-cli",
   "author": {
     "name": "Michael Wuergler",
     "email": "wuergler@gmail.com",
     "url": "numetriclabs.com"
   },
-  "bin": "cli.js",
+  "bin": {
+    "jsnip": "cli.js"
+  },
   "engines": {
     "node": ">=4"
   },
   "scripts": {
-    "test": "eslint cli.js index.js templates && ava"
+    "test": "eslint cli.js && ava"
   },
   "files": [
-    "snippets",
-    "index.js",
     "cli.js"
   ],
   "keywords": [
@@ -41,7 +41,7 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "clipboardy": "^1.0.1",
-    "handlebars": "^4.0.6",
+    "jsnip": "0.0.7",
     "meow": "^3.7.0"
   },
   "devDependencies": {
@@ -50,6 +50,7 @@
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0"
+    "eslint-plugin-react": "^6.10.0",
+    "execa": "^0.6.1"
   }
 }

@@ -1,6 +1,6 @@
-# jsnip [![Build Status](https://travis-ci.org/radiovisual/jsnip.svg?branch=master)](https://travis-ci.org/radiovisual/jsnip)
+# jsnip-cli [![Build Status](https://travis-ci.org/radiovisual/jsnip-cli.svg?branch=master)](https://travis-ci.org/radiovisual/jsnip-cli)
 
-> Get common JavaScript code snippets.
+> Get common JavaScript code snippets from the command line.
 
 :hamburger: This is my WIP snippet library where you can get common JS code snippets
 from the command line. You have the option to customize the snippet or send
@@ -9,6 +9,8 @@ the snippet to the system clipboard.
 **Note:** The React snippets are currently in a React Native flavor and the
 JavaScript is intended to reflect the ES2015 (ES6) syntax.
 
+If you want to get these snippets in Node, check out the API for this module: [jsnip](https://github.com/radiovisual/jsnip).
+
 ## Install
 
 Install the cli to use on the command line
@@ -16,69 +18,22 @@ Install the cli to use on the command line
 $ npm install --global jsnip
 ```
 
-Or, you can install and use it within your node projects / build routines
-
-```
-$ npm install --save jsnip
-```
-
-
 ## Usage
 
-From the cli:
+Examples from the cli (both lines to the same thing):
 
 ```
+$ jsnip class --copy --name MyClass
 $ jsnip class -c -n MyClass
 ```
 
-Or from Node.js:
-
-```js
-const jsnip = require('jsnip');
-jsnip('reducer');
-```
-
-## API
-
-### jsnip(input, [options])
-
-#### input
-
-Type: `string`
-
-The name of the code snippet you want to print. Click the link to see the actual
-snippet file.
-
-| input | Description |
-| ------| -----------|
-| [function](snippets/react-function.js)   | A functional React component. |
-| [class](snippets/react-class.js)       | A class-based React component. |
-| [action](snippets/redux-actions.js)     | A Redux action snippet. |
-| [reducer](snippets/redux-reducer.js)     | A Redux reducer snippet. |
-| [lorem](snippets/lorem.txt)     | 3 paragraphs of lorem ipsum text. |
-
-#### input
-
-Type: `object`  
-
-Possible options are:
-
-| Name | Description |
-| ------| -----------|
-| `-c, --copy`   | Copy the output to the system clipboard |
-| `-n, --name`      | Specify the function or class name to use in the output |
-
 ## CLI
-
-```
-$ npm install --global jsnip
-```
 
 ```
 $ jsnip --help
 
 Usage
-  $ jsnip [input]
+  $ jsnip [command] [options]
 
 Commands
   action    Print a redux action creator snippet
@@ -102,6 +57,10 @@ Examples
 Currently this module is for my own productivity, so I won't be accepting Pull
 Requests that try to impose specific styles or opinions. However I will accept Pull
 Requests that aim to populate the snippet library with useful goodies. :hamburger:
+
+## Related
+
+- [jsnip](https://github.com/radiovisual/jsnip): The API for this module.
 
 ## License
 

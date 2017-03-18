@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 const meow = require('meow');
 const chalk = require('chalk');
-const jsnip = require('./');
+const clipboard = require('clipboardy');
+const jsnip = require('jsnip');
 
 const rule = chalk.cyan('---------------------------------');
 
@@ -35,6 +36,7 @@ const cli = meow(`
 jsnip(cli.input[0], cli.flags)
   .then((data) => {
     if (cli.flags.c) {
+      clipboard.writeSync(data);
       console.log('\nThe following was copied to the', chalk.yellow('clipboard'));
     }
     console.log(rule);
