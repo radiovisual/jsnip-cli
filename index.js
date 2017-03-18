@@ -1,4 +1,5 @@
 const handlebars = require('handlebars');
+const clipboard = require('clipboardy');
 const actionSnip = require('./snippets/redux-actions');
 const functionSnip = require('./snippets/react-function');
 const classSnip = require('./snippets/react-class');
@@ -30,6 +31,10 @@ module.exports = (input, opts) => {
 
   const template = handlebars.compile(snippets[input]);
   const result = template(options);
+
+  if (options.copy) {
+    clipboard.writeSync(result);
+  }
 
   return Promise.resolve(result);
 };

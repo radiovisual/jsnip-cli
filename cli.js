@@ -18,18 +18,25 @@ const cli = meow(`
 
   Options
     -n, --name  Specify the name to use in the output
+    -c, --copy  Copy the output to the system clipboard
 
   Examples
     $ jsnip action
     $ jsnip reducer
+    $ jsnip class -c -n MyAwesomeClass
+
 `, {
   alias: {
     n: 'name',
+    c: 'copy',
   },
 });
 
 jsnip(cli.input[0], cli.flags)
   .then((data) => {
+    if (cli.flags.c) {
+      console.log('\nThe following was copied to the', chalk.yellow('clipboard'));
+    }
     console.log(rule);
     console.log(data);
     console.log(rule);

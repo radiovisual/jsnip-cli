@@ -25,6 +25,30 @@ test('class', async (t) => {
   t.true(data.search('export default ClassName;') > -1);
 });
 
+test('custom action', async (t) => {
+  const data = await fn('action', { name: 'Foo' });
+  t.is(typeof data, 'string');
+  t.true(data.search('export default Foo;') > -1);
+});
+
+test('custom reducer', async (t) => {
+  const data = await fn('reducer', { name: 'Foo' });
+  t.is(typeof data, 'string');
+  t.true(data.search('export default Foo;') > -1);
+});
+
+test('custom function', async (t) => {
+  const data = await fn('function', { name: 'Foo' });
+  t.is(typeof data, 'string');
+  t.true(data.search('export default Foo;') > -1);
+});
+
+test('custom class', async (t) => {
+  const data = await fn('class', { name: 'Foo' });
+  t.is(typeof data, 'string');
+  t.true(data.search('export default Foo;') > -1);
+});
+
 test('lorem', async (t) => {
   const data = await fn('lorem');
   t.is(typeof data, 'string');
