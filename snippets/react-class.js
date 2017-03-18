@@ -1,7 +1,8 @@
+module.exports = `
 import React, { Component, Proptypes } from 'react';
 import { View, Text } from 'react-native';
 
-class ClassName extends Component {
+class {{name}} extends Component {
   componentWillMount() {
     // get to work.
   }
@@ -15,12 +16,14 @@ class ClassName extends Component {
   }
 }
 
-ClassName.defaultProps = {
+{{name}}.defaultProps = {
   text: 'Hello.',
 };
 
-ClassName.propTypes = {
+{{name}}.propTypes = {
   text: Proptypes.string,
 };
 
-export default ClassName;
+export default {{name}};
+
+`;

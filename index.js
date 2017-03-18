@@ -1,24 +1,35 @@
-const fs = require('fs');
-const path = require('path');
-const pify = require('pify');
+const handlebars = require('handlebars');
+const actionSnip = require('./snippets/redux-actions');
+const functionSnip = require('./snippets/react-function');
+const classSnip = require('./snippets/react-class');
+const loremSnip = require('./snippets/lorem');
+const reducerSnip = require('./snippets/redux-reducer');
 
-module.exports = (input) => {
+module.exports = (input, opts) => {
   if (typeof input !== 'string') {
     throw new TypeError(`Expected a string, got ${typeof input}`);
   }
 
+  const options = opts || {};
+
+  if (!options.name) {
+    options.name = 'ClassName';
+  }
+
   const snippets = {
-    action: 'redux-actions.js',
-    reducer: 'redux-reducer.js',
-    function: 'react-function.js',
-    class: 'react-class.js',
-    lorem: 'lorem.txt',
+    action: actionSnip,
+    reducer: reducerSnip,
+    function: functionSnip,
+    class: classSnip,
+    lorem: loremSnip,
   };
 
   if (!snippets[input]) {
     return Promise.resolve(`There is no snippet by the name ${input}`);
   }
 
-  const filepath = path.join(__dirname, 'snippets', snippets[input]);
-  return pify(fs.readFile)(filepath, 'utf8');
+  const template = handlebars.compile(snippets[input]);
+  const result = template(options);
+
+  return Promise.resolve(result);
 };

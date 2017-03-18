@@ -1,10 +1,11 @@
+module.exports = `
 import {
   CONSTANT_TYPE,
 } from '../actions/types';
 
 const INITIAL_STATE = {};
 
-const reducer = (state = INITIAL_STATE, action) => {
+const {{name}} = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case CONSTANT_TYPE:
       return { ...state };
@@ -13,4 +14,6 @@ const reducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default reducer;
+export default {{name}};
+
+`;

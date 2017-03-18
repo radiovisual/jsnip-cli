@@ -1,7 +1,8 @@
+module.exports = `
 import React, { PropTypes } from 'react';
 import { View, Text } from 'react-native';
 
-const Component = (props) => {
+const {{name}} = (props) => {
   return (
     <View>
       <Text>{props.text}</Text>
@@ -9,12 +10,14 @@ const Component = (props) => {
   );
 };
 
-Component.defaultProps = {
+{{name}}.defaultProps = {
   text: 'Hello.',
 };
 
-Component.propTypes = {
+{{name}}.propTypes = {
   text: PropTypes.string,
 };
 
-export default Component;
+export default {{name}};
+
+`;

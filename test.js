@@ -4,19 +4,19 @@ import fn from './';
 test('action', async (t) => {
   const data = await fn('action');
   t.is(typeof data, 'string');
-  t.true(data.search('export default actionName;') > -1);
+  t.true(data.search('export default ClassName;') > -1);
 });
 
 test('reducer', async (t) => {
   const data = await fn('reducer');
   t.is(typeof data, 'string');
-  t.true(data.search('export default reducer;') > -1);
+  t.true(data.search('export default ClassName;') > -1);
 });
 
 test('function', async (t) => {
   const data = await fn('function');
   t.is(typeof data, 'string');
-  t.true(data.search('export default Component;') > -1);
+  t.true(data.search('export default ClassName;') > -1);
 });
 
 test('class', async (t) => {
