@@ -1,6 +1,6 @@
 {
   "name": "jsnip-cli",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Get common JavaScript code snippets from the command line.",
   "license": "MIT",
   "repository": "radiovisual/jsnip-cli",
