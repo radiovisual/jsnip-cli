@@ -41,7 +41,7 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "clipboardy": "^1.0.1",
-    "jsnip": "0.0.7",
+    "jsnip": "*",
     "meow": "^3.7.0"
   },
   "devDependencies": {

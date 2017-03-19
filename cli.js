@@ -11,11 +11,12 @@ const cli = meow(`
     $ jsnip [input]
 
   Commands
-    action    Print a redux action creator snippet
-    reducer   Print a redux reducer snippet
-    function  Print a functional React component
-    class     Print a class-based React component
-    lorem     Print 3 paragraphs of lorem ipsum text
+    action      Print a redux action creator snippet
+    reducer     Print a redux reducer snippet
+    function    Print a functional React component
+    class       Print a class-based React component
+    lorem       Print 3 paragraphs of lorem ipsum text
+    reduxclass  Print a redux-react connected Class component
 
   Options
     -n, --name  Specify the name to use in the output
